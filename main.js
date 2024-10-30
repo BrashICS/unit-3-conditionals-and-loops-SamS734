@@ -27,3 +27,47 @@ function round(value, decimals) {
 function randInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
+
+function user() {
+    // The user's age
+    let user_age = +prompt(`How old are you?`);
+    
+    if (user_age >= 60) {
+        console.log(`You qualify for the senior discount!`);
+    }
+
+    if (user_age < 16) {
+        console.log(`You're not old enough to drive yet.`);
+    }
+
+    if (user_age == 44) {
+        console.log(`So is Mr. Squirrel!`);
+    }
+
+    // The user's name
+    let user_name = prompt(`What is your name?`);
+
+    if (user_name == `Mr.Squirrel`) {
+        console.log(`🐿️`);
+    }
+
+    if (user_name.length > 7) {
+        console.log(`You have a long name.`);
+    }
+    
+    // User guesses how long their name is
+    let user_guess = +prompt(`How long do you think your name is? (characters)`);
+
+    if (user_guess == user_name.length) {
+        console.log(`That's correct! ✔️`);
+    }
+
+    if (user_guess > user_name.length) {
+        console.log(`Too high ✖️`);
+    }
+
+    if (user_guess < user_name.length) {
+        console.log(`Too low ✖️`);
+    }
+}
+
