@@ -33,11 +33,11 @@ function user() {
     let user_age = +prompt(`How old are you?`);
     
     if (user_age >= 60) {
-        console.log(`You qualify for the senior discount!`);
+        return `You qualify for the senior discount!`;
     }
 
     if (user_age < 16) {
-        console.log(`You're not old enough to drive yet.`);
+        return `You're not old enough to drive yet.`;
     }
 
     if (user_age == 44) {
