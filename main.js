@@ -12,7 +12,7 @@
 'use strict';
 
 /*** Event Listeners ***/
-
+document.getElementById("game_button").addEventListener("click", start_game);
 
 
 /*** Functions ***/
@@ -71,3 +71,16 @@ function user() {
     }
 }
 
+// SPOOKY ADVENTURE GAME!!!
+function start_game() {
+    // Intro
+    let player_name = prompt(`It's dark, and you're lost. You have no clue where you are and wonder if you're even in Canada. You wander around aimlessly, and stumble upon... an abandoned building? Suddenly, a mysterious figure approaches you and asks, "What is your name?"👻👻`);
+    alert(`"Welcome, ${player_name}. This is my domain expansion!😈 By the way, if you want your phone back, you're gonna have to find me in the building."😝`);
+
+    // First choice
+    let first_choice = +prompt(`The figure dissapears into fog. You check your pockets frantically, but the "thing" was right. Your phone is gone, but how could this be?! You have so many precious photos of your cat, and you NEED to get them back. Do you (1) Run away and sacrifice the cat photos🏃💨, (2) Run into the building for your cat photos!!!🐈‍⬛🐈‍⬛`);
+
+    if (first_choice == 1) {
+        
+    }
+}
