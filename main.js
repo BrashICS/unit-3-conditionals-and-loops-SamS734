@@ -13,8 +13,11 @@
 
 /*** Event Listeners ***/
 document.getElementById("game_button").addEventListener("click", start_game);
+document.getElementById("menu_button").addEventListener("click", menu);
 
 /*** Functions ***/
+
+/// Unit 3.1
 
 // A very accurate rounding function
 function round(value, decimals) {
@@ -70,6 +73,97 @@ function user() {
     }
 }
 
+/// Unit 3.2
+
+// Setup the menu
+let message = `Hi! Please make a selection:
+1 - Play
+2 - Options
+3 - DLC
+4 - Check for Updates
+5 - Exit
+`
+
+let difficulty = `Choose a Difficulty:
+1 - Easy
+2 - Medium
+3 - Hard
+`
+
+// Prompt with the menu
+function menu() {
+    let selection = +prompt(message);
+
+    if (selection == 1) {
+        alert(`Let's play!`);
+        let difficulty_choice = +prompt(difficulty);
+    
+        if (difficulty_choice == 1) {
+            alert(`You selected the easy route.`);
+        }
+    
+        else if (difficulty_choice == 2) {
+            alert(`Most people selected medium.`);
+        }
+    
+        else if (difficulty_choice == 3) {
+            alert(`I see you like a challenge!`);
+        }
+    
+        else {
+            alert(`...You didn't choose an option, make sure you input a number!`);
+        }
+    }
+    
+    else if (selection == 2) {
+        alert(`You selected Options.`);
+    }
+    
+    else if (selection == 3) {
+        alert(`No new DLC at this time.`);
+    }
+    
+    else if (selection == 4) {
+        alert(`Everything is up to date.`);
+    }
+    
+    else if (selection == 5) {
+        alert(`Bye!`);
+    }
+}
+
+
+// Unit 3.2 Part 2
+function greeting(hour) {
+    if ((hour >= 0) && (hour <= 11)) {
+        return `Good morning!`;
+    }
+    
+    else if ((hour >= 12) && (hour <= 17)) {
+        return `Good afternoon!`;
+    }
+    
+    else if ((hour >= 18) && (hour <= 23)) {
+        return `Good evening!`;
+    }
+
+    else {
+        return `Invalid hour!`;
+    }
+} 
+
+// Unit 3.2 Optional
+function two_digit() {
+    let random_2d = randInt(10, 99);
+
+    if (random_2d == 0) {
+        return `0`;
+    }
+
+    else if () {
+    }
+}
+
 // SPOOKY ADVENTURE GAME!!!
 function start_game() {
     // Intro
@@ -96,7 +190,7 @@ function start_game() {
 
 // First Choice, Option 1
 function run_away() {
-    alert(`You decide to run away and sacrifice the cat photos. However, the figure suddenly appears before you again! 👻"Trying to run away huh? TOO BAD!!!"👻\nTHE END`);
+    alert(`You decide to run away and sacrifice the cat photos. However, the figure suddenly appears before you again! 👻"Trying to run away huh? TOO BAD!!!"👻\n\nTHE END`);
 }
 
 // First Choice, Option 2
@@ -124,7 +218,7 @@ function building() {
 
 // Second Choice, Option 1
 function dark_left() {
-    
+    alert(`You chose to go into the dark and immeidately find yourself lost.`);
 }
 
 // Second Choice, Option 2
