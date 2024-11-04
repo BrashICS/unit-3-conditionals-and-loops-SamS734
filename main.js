@@ -15,6 +15,7 @@
 document.getElementById("game_button").addEventListener("click", start_game);
 document.getElementById("menu_button").addEventListener("click", menu);
 
+
 /*** Functions ***/
 
 /// Unit 3.1
