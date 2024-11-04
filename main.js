@@ -14,7 +14,6 @@
 /*** Event Listeners ***/
 document.getElementById("game_button").addEventListener("click", start_game);
 
-
 /*** Functions ***/
 
 // A very accurate rounding function
