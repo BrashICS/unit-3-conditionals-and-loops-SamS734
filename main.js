@@ -14,7 +14,7 @@
 /*** Event Listeners ***/
 document.getElementById("game_button").addEventListener("click", start_game);
 document.getElementById("menu_button").addEventListener("click", menu);
-
+document.getElementById("guess").addEventListener("click", guess_10);
 
 /*** Functions ***/
 
@@ -144,6 +144,56 @@ function greeting(hour) {
 //     else if () {
 //     }
 // }
+
+/// Unit 3.3 Part 1
+function is_number(num) {
+    if (typeof num == "number") {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// Unit 3.3 Part 2
+function which_day(n) {
+    if (is_number(n) == false) {
+        return`Invalid type`;
+    } else if (n == 1) {
+        return `Sunday`;
+    } else if (n == 2) {
+        return `Monday`;
+    } else if (n == 3) {
+        return `Tuesday`;
+    } else if (n == 4) {
+        return `Wednesday`;
+    } else if (n == 5) {
+        return `Thursday`;
+    } else if (n == 6) {
+        return `Friday`;
+    } else if (n == 7) {
+        return `Saturday`;
+    } else {
+        return `Invalid value`;
+    }
+}
+
+// Unit 3.3 Part 3
+function guess_10() {
+    let secret_n = randInt(1, 10);
+    let user_guess = +prompt(`Select a number from 1-10`);
+
+    if (user_guess == secret_n) {
+        alert(`Nice, you guessed the correct number!`);
+    } else if (user_guess > 10 || user_guess < 1) {
+        alert(`Your guess was not from 1-10. The secret number was ${secret_n}.`);
+    } else if (user_guess < secret_n) {
+        alert(`Your guess was too low! The secret number was ${secret_n}.`);
+    } else if (user_guess > secret_n) {
+        alert(`Your guess was too high! The secret number was ${secret_n}.`);
+    } else {
+        alert(`ERROR`);
+    }
+}
 
 // SPOOKY ADVENTURE GAME!!!
 function start_game() {
