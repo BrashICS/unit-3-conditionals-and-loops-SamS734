@@ -76,10 +76,11 @@ function user() {
 
 
 
+
 // SPOOKY ADVENTURE GAME!!!
 function start_game() {
     // Intro
-    let player_name = prompt(`It's dark, and you're lost. You have no clue where you are and wonder if you're even in Canada. You wander around aimlessly, and stumble upon... an abandoned building? Suddenly, a mysterious figure approaches you and asks, "What is your name?"👻👻`);
+    let player_name = prompt(`It's dark, and you're lost. You have no clue where you are and wonder if you're even in Canada. You wander around aimlessly, and stumble upon... an abandoned building? Suddenly, a mysterious figure approaches you and asks, 👻"What is your name?"👻`);
     alert(`"Welcome, ${player_name}. This is my domain expansion!😈 By the way, if you want your phone back, you're gonna have to find me in the building."😝`);
 
     alert(`The figure dissapears into fog. You check your pockets frantically, but the "thing" was right. Your phone is gone, but how could this be?! You have so many precious photos of your cat, and you NEED to get them back.`)
@@ -124,9 +125,9 @@ function dark_left() {
     let fake_choice = +prompt(`Do you (1) Try and run back to where you came from or (2) Continue running into the dark`);
 
     if (fake_choice == 1) {
-        alert(``);
+        alert(`Unfortunately, you ran too deep and can't find your way out.\n\nTHE END`);
     } else if (fake_choice == 2) {
-        alert(``);
+        alert(`Great idea! You run into the dark and get stuck there forever.\n\nTHE END`);
     } else {
         bruh();
     }
@@ -134,18 +135,19 @@ function dark_left() {
 
 // Second Choice, Option 2
 function upstairs() {
-    
+    alert(`You sprint upstairs only to find out that you aren't going up, but falling! There was a hole under you that was too dark to see, and you plummet down.\n\nTHE END`);
 }
 
 // Second Choice, Option 3
 function corner_right() {
-    
+    alert(`You turn the corner and see the ghost playing Block Blast on your phone. 👻"Oh! Congrats on finding me! Here's your phone."👻\n\nTHE GOOD END`);
 }
 
 // If they didn't choose an option
 function bruh() {
     alert(`Uhh, you didn't choose an option correctly. Please make sure you ONLY put the number and refresh the page to try again!`);
 }
+
 
 
 /// Unit 3.2
