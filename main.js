@@ -272,7 +272,7 @@ function guess_10() {
 }
 
 
-/// Unit 4 Practice
+/// Unit 3.4 Practice
 
 // Countdown
 
@@ -322,3 +322,20 @@ function average(n) {
 
     console.log(`The average is ${round(avg / n, 1)}`);
 }
+
+
+/// Unit 3.5 Part 1
+
+function print_reverse(str) {
+    let char = str.length - 1;
+    let reversed = "";
+
+    while (char >= 0) {
+        reversed += (str[char])
+        char--
+    }
+
+    console.log(reversed);
+}
+
+// Unit 3.5 Part 2
