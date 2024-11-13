@@ -295,19 +295,30 @@ function countdown(start, stop) {
 // Random Until Stop
 
 function random_until(min, max, stop) {
-    let roll_amount = 1;
-    let roll_number = randInt(min, max);
-
-    if (max < min) {
-        return -1;
-    } else if ((stop > max) || (stop < min)) {
+    if (max <= min || stop < min || stop > max) {
         return -1;
     } else {
-        while (roll_number != stop) {
-        console.log(roll_number);
-        roll_amount++;
+        let rnd_number = randInt(min, max);
+        
+        while (rnd_number != stop) {
+            console.log(rnd_number);
+            rnd_number = randInt(min, max);
+        }
     }
-}
     
-    return roll_amount;
+    return stop;
+}
+
+// Average
+
+function average(n) {
+    let avg = 0;
+    let count = 1;
+
+    while (count <= n) {
+        avg += +prompt(`Please enter value ${count}/${n}`);
+        count++;
+    }
+
+    console.log(`The average is ${round(avg / n, 1)}`);
 }
