@@ -327,11 +327,11 @@ function average(n) {
 /// Unit 3.5 Part 1
 
 function print_reverse(str) {
-    let char = str.length - 1;
+    let last = str.length - 1;
     let reversed = "";
 
-    while (char >= 0) {
-        reversed += (str[char])
+    while (last >= 0) {
+        reversed += (str[last])
         char--
     }
 
@@ -339,3 +339,60 @@ function print_reverse(str) {
 }
 
 // Unit 3.5 Part 2
+
+function dragons_and_goblins(str) {
+    let char = 0;
+    let d_count = 0;
+    let g_count = 0;
+
+    while (char < str.length) {
+        let d_or_g = (str[char]);
+
+        if (d_or_g == "d") {
+            d_count++;
+        } if (d_or_g == "g") {
+            g_count++;
+        }
+
+        char++;
+    }
+
+    console.log(`Dragons: ${d_count} Goblins ${g_count}`);
+}
+
+// Unit 3.5 Part 3
+
+function add(str) {
+    let char = 0;
+    let sum = 0;
+
+    while (char < str.length) {
+        let digit = +(str[char]);
+        sum += digit;
+        char++;
+    }
+
+    return sum;
+}
+
+// Unit 3.5 Part 4
+
+function add_subtract(str) {
+    let char = 0;
+    let sum = 0;
+
+    while (char < str.length) {
+        let digit = (str[char]);
+        
+        if (digit == "-") {
+            char++;
+            digit = +(str[char]);
+            sum -= digit;
+        } else {
+            sum += digit;
+            char++;
+        }
+    }
+
+    return sum;
+}
