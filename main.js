@@ -332,7 +332,7 @@ function print_reverse(str) {
 
     while (last >= 0) {
         reversed += (str[last])
-        char--
+        last--
     }
 
     console.log(reversed);
