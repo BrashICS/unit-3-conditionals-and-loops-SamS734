@@ -396,3 +396,38 @@ function add_subtract(str) {
 
     return sum;
 }
+
+
+/// Unit 3.6 Practice
+
+// Parrot
+
+function parrot() {
+    let input;
+    let output = "";
+
+    do {
+        input = prompt(`Please enter some text or the word "quit" to exit: `);
+        output = input.toUpperCase();
+
+        if (input.toLowerCase() != "quit") {
+            console.log(output)
+        }
+
+    } while (input.toLowerCase() != "quit");
+
+    console.log(`GOODBYE! 🦜`);
+}
+
+// Negative Only
+
+function negative_only() {
+    let input;
+
+    do {
+        input = +prompt(`Please enter a negative number: `);
+    } while (isNaN(input) || input >= 0)
+
+    return input;
+}
+
