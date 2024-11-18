@@ -431,3 +431,28 @@ function negative_only() {
     return input;
 }
 
+
+/// Unit 3.7 Practice
+
+// Unit 3.7 Part 1
+
+function count_up(start, stop) {
+    for (let n = start; n <= stop; n++) {
+        console.log(n)
+    }
+}
+
+function count_down(start, stop) {
+    for (let n = start; n >= stop; n--) {
+        console.log(n)
+    }
+}
+
+function print_chars(str, step) {
+    for (let chars = 0; chars < str.length; chars += step) {
+        console.log(str[chars]);
+    }
+}
+
+// Unit 3.7 Part 2
+
