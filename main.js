@@ -456,3 +456,36 @@ function print_chars(str, step) {
 
 // Unit 3.7 Part 2
 
+function sum(n) {
+    let answer = 0;
+
+    for (let add_by = 0; add_by <= n; add_by++) {
+        answer += add_by
+    }
+
+    return answer;
+}
+
+function count4(begin, end) {
+    let quotient_count = 0;
+
+    for (let start = begin; start <= end; start++) {
+        if (start % 4 == 0) {
+            quotient_count++
+        }
+    }
+
+    return quotient_count;
+}
+
+function sum_divisible(n, x) {
+    let answer = 0;
+
+    for (let add_by = 0; add_by <= n; add_by++) {
+        if (add_by % x == 0) {
+            answer += add_by
+        }
+    }
+ 
+    return answer;
+}
