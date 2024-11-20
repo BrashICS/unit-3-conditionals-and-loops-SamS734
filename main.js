@@ -489,3 +489,26 @@ function sum_divisible(n, x) {
  
     return answer;
 }
+
+
+/// More Practice
+
+function count_char(str, char) {
+    let char_count = 0;
+
+    for (let current_char = 0; current_char < str.length; current_char++) {
+        if (str[current_char] == char) {
+            char_count++
+        } 
+    }
+
+    if (char_count > 0) {
+        return char_count;
+    } else {
+        return -1;
+    }
+}
+
+function print_codes(str) {
+    for (;;) {}
+}
